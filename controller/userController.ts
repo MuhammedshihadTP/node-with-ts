@@ -5,6 +5,7 @@ import { userData } from "../model/user";
 
 export const home = async (req: Express.Request, res: Express.Response) => {
   const users = await userData.find();
+  console.log(users);
   res.status(200).json(users);
 };
 export const addUser = async (req: Express.Request, res: Express.Response) => {
